@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.BerandaFragment">
-
-    <!-- Halo Nama Pengguna -->
+\
     <TextView
         android:id="@+id/tvNamaPengguna"
         android:layout_width="wrap_content"
@@ -26,7 +25,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/logo_beranda"
+        android:src="@drawable/banner_toko_galon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvNamaPengguna" />
