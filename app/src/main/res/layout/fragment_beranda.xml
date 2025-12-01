@@ -18,19 +18,22 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Banner Promo -->
+
+    <!-- Judul Produk -->
+
     <ImageView
         android:id="@+id/imgBanner"
         android:layout_width="377dp"
-        android:layout_height="170dp"
+        android:layout_height="175dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:scaleType="centerCrop"
         android:src="@drawable/banner_toko_galon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvNamaPengguna" />
 
-    <!-- Judul Produk -->
     <TextView
         android:id="@+id/tvProduk"
         android:layout_width="wrap_content"
@@ -43,6 +46,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- RecyclerView Produk -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProduk"
         android:layout_width="0dp"
@@ -50,8 +54,10 @@
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvProduk" />
+        app:layout_constraintTop_toBottomOf="@id/tvProduk"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -76,7 +82,7 @@
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
+        android:layout_marginStart="80dp"
         android:src="@drawable/pesanan"
         app:layout_constraintBottom_toBottomOf="@+id/imageView10"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
@@ -101,10 +107,55 @@
         android:src="@drawable/akun"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.472" />
+
+    <TextView
+        android:id="@+id/textViewBeranda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beranda"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewBeranda2"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.411" />
+
+    <TextView
+        android:id="@+id/textViewBeranda2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:text="Pesanan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewRiwayat"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <TextView
+        android:id="@+id/textViewRiwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:text="Riwayat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewRiwayat2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/textViewRiwayat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:text="Akun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintVertical_bias="0.2" />
 
     <!-- Bottom Navigation -->
 
