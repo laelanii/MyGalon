@@ -8,13 +8,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout"
-        android:layout_width="412dp"
-        android:layout_height="335dp"
+        android:layout_width="410dp"
+        android:layout_height="365dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/bg_rounded_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -26,8 +26,8 @@
             android:background="@drawable/input"
             android:hint="Masukkan E-mail"
             android:inputType="textEmailAddress"
-            android:textSize="18dp"
             android:padding="10dp"
+            android:textSize="18dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,10 +89,10 @@
 
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="188dp"
-        android:layout_height="213dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="159dp"
+        android:layout_height="188dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="76dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -122,7 +122,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageLogo"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewDeskripsi"
@@ -133,9 +133,9 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewBrand"
-        app:layout_constraintVertical_bias="0.604" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
