@@ -157,6 +157,12 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView11"
         app:layout_constraintVertical_bias="0.2" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="240dp"
+        android:layout_height="8dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="557dp" />
+
     <!-- Bottom Navigation -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
