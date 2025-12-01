@@ -18,10 +18,10 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:id="@+id/btnBackHistory"
+            android:id="@+id/btnBack"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable"/>
+            android:src="@drawable/back"/>
 
         <TextView
             android:id="@+id/titleHistory"
