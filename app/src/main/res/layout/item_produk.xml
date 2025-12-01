@@ -13,39 +13,45 @@
         android:orientation="vertical"
         android:padding="12dp">
 
+        <!-- Nama Produk -->
         <TextView
             android:id="@+id/tvNamaProduk"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama Produk"
+            android:text="Aqua 15L"
             android:textSize="14sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_gravity="center"/>
+            android:paddingBottom="6dp"/>
 
+        <!-- Gambar Produk -->
         <ImageView
             android:id="@+id/imgProduk"
-            android:layout_width="120dp"
+            android:layout_width="100dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
-            android:scaleType="fitCenter"
-            android:src="@drawable/aqua"/>
+            android:scaleType="centerInside"
+            android:src="@drawable/aqua" />
 
+        <!-- Tombol Add to Cart -->
         <Button
             android:id="@+id/btnAddCart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add to Cart"
-            android:backgroundTint="#90E0EF"
-            android:layout_marginTop="8dp"/>
+            android:backgroundTint="#35A8E0"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dp"/>
 
+        <!-- Tombol Order -->
         <Button
             android:id="@+id/btnOrder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Order"
-            android:backgroundTint="#FFA94D"
-            android:layout_marginTop="4dp"/>
+            android:textColor="@android:color/white"
+            android:backgroundTint="#F9B23D"
+            android:layout_marginTop="6dp"/>
 
     </LinearLayout>
 
