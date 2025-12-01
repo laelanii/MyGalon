@@ -6,6 +6,34 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <!-- 🔹 BACK BUTTON + TEXT -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/Galon"
         android:layout_width="220dp"
@@ -13,7 +41,7 @@
         android:src="@drawable/aqua"
         android:layout_marginTop="20dp"
         android:scaleType="fitCenter"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -31,10 +59,10 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical">
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/txtNamaProduk"
@@ -58,7 +86,7 @@
                 android:id="@+id/txtDeskripsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Aqua Galon adalah air minum berkualitas dengan proses penyaringan berlapis untuk menjaga rasa yang segar dan aman dikonsumsi setiap hari. Galon ini cocok untuk kebutuhan rumah, kantor, maupun usaha kecil. Produk selalu dalam kondisi tersegel, higienis, dan siap antar."
+                android:text="Aqua Galon adalah air minum berkualitas dengan proses penyaringan berlapis untuk menjaga rasa yang segar dan aman dikonsumsi setiap hari."
                 android:textSize="14sp"
                 android:layout_marginBottom="10dp"/>
 
@@ -78,6 +106,7 @@
                 android:text="Harga Isi Ulang / Galon : Rp. 5000 / 25.000"
                 android:textStyle="bold"
                 android:textSize="15sp"/>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -93,4 +122,5 @@
         app:layout_constraintTop_toBottomOf="@id/cardDetail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
