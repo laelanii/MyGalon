@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigaton"
-    app:startDestination="@id/akunFragment">
+    app:startDestination="@id/berandaFragment">
 
     <fragment
         android:id="@+id/akunFragment"
@@ -14,15 +14,27 @@
         android:id="@+id/berandaFragment"
         android:name="com.example.mygalon.home.BerandaFragment"
         android:label="fragment_beranda"
-        tools:layout="@layout/fragment_beranda" />
+        tools:layout="@layout/fragment_beranda" >
+        <action
+            android:id="@+id/action_berandaFragment_to_pesananFragment"
+            app:destination="@id/pesananFragment" />
+    </fragment>
     <fragment
         android:id="@+id/pesananFragment"
         android:name="com.example.mygalon.home.PesananFragment"
         android:label="fragment_pesanan"
-        tools:layout="@layout/fragment_pesanan" />
+        tools:layout="@layout/fragment_pesanan" >
+        <action
+            android:id="@+id/action_pesananFragment_to_riwayatFragment"
+            app:destination="@id/riwayatFragment" />
+    </fragment>
     <fragment
         android:id="@+id/riwayatFragment"
         android:name="com.example.mygalon.home.RiwayatFragment"
         android:label="fragment_riwayat"
-        tools:layout="@layout/fragment_riwayat" />
+        tools:layout="@layout/fragment_riwayat" >
+        <action
+            android:id="@+id/action_riwayatFragment_to_akunFragment"
+            app:destination="@id/akunFragment" />
+    </fragment>
 </navigation>
