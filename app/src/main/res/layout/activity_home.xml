@@ -62,4 +62,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/home_graph"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="361dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="289dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
