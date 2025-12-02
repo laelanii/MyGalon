@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGalon">
         <activity
+            android:name=".detail_produk"
+            android:exported="false" />
+        <activity
+            android:name=".checkout_activity"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity
