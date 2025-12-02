@@ -1,18 +1,56 @@
 package com.example.mygalon
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class GalonAdapter(val listGalon: List<galon>, val onClickItemGalon:(galon)-> Unit): RecyclerView.Adapter<GalonAdapter.GalonViewHolder>() {
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): GalonAdapter.GalonViewHolder {
-        TODO("layout galon nanti")
+class GalonAdapter(
+    private val listGalon: List<galon>,
+    private val onClickItemGalon: (galon) -> Unit
+) : RecyclerView.Adapter<GalonAdapter.GalonViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GalonViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_produk, parent, false)
+        return GalonViewHolder(view)
+    }
+
+    override fun getItemCount(): Int {
+        return listGalon.size
+    }
+
+    override fun onBindViewHolder(holder: GalonViewHolder, position: Int) {
+        val galon = listGalon[position]
+        holder.bind(galon)
+    }
+
+    inner class GalonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val tvNamaProduk: TextView = itemView.findViewById(R.id.tvNamaProduk)
+        private val imgProduk: ImageView = itemView.findViewById(R.id.imgProduk)
+        private val btnAddCart: Button = itemView.findViewById(R.id.btnAddCart)
+        private val btnOrder: Button = itemView.findViewById(R.id.btnOrder)
+
+        fun bind(galon: galon) {
+            tvNamaProduk.text = galon.namaGalon
+
+            // Atur gambar berdasarkan merk galon
+            val imageResource = when (galon.merkGalon) {
+                merkGalon.Aqua -> R.drawable.aqua
+                merkGalon.LeMinerale -> R.drawable.lemineral
+                merkGalon.Cleo -> R.drawable.cleo
+                merkGalon.Oasis -> R.drawable.oasis
+            }
+            imgProduk.setImageResource(imageResource)
+
+            itemView.setOnClickListener {
+                onClickItemGalon(galon)
+            }
+
+
+        }
     }
 }
