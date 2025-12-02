@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+<!--alamat-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,6 +58,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+<!--produk yg di checkout-->
             <LinearLayout
                 android:layout_marginTop="14dp"
                 android:layout_width="match_parent"
@@ -125,6 +127,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+<!--pilih metode pembayaran-->
             <LinearLayout
                 android:layout_marginTop="14dp"
                 android:background="@drawable/card"
@@ -186,6 +189,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+<!--rincian-->
             <LinearLayout
                 android:layout_marginTop="14dp"
                 android:background="@drawable/card"
@@ -241,7 +245,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="  Rp 25.000"
-            android:textColor="#E65100"
+            android:textColor="#FFA94D"
             android:textStyle="bold"/>
 
         <Button
