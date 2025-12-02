@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- ALAMAT -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,7 +57,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- PRODUK -->
             <LinearLayout
                 android:layout_marginTop="14dp"
                 android:layout_width="match_parent"
