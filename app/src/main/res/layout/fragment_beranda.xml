@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAFAFA"
     tools:context=".home.BerandaFragment">
 
     <TextView
@@ -26,7 +27,6 @@
         android:scaleType="centerCrop"
         android:src="@drawable/banner_toko_galon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvNamaPengguna" />
 
@@ -34,10 +34,12 @@
         android:id="@+id/tvProduk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Product"
+        android:text="Produk"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
         app:layout_constraintTop_toBottomOf="@id/imgBanner"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -46,6 +48,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="8dp"
+        android:clipToPadding="false"
         app:layout_constraintTop_toBottomOf="@id/tvProduk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
