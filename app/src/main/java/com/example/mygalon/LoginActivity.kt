@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         //lambda
         buttonLogin.setOnClickListener{
             val email = editTextTextEmailAddress.text.toString() //proses pengiriman
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Home::class.java)
             intent.putExtra(KEY_USERNAME, email)
             startActivity(intent)
 

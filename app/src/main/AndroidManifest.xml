@@ -11,21 +11,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGalon">
+        
+        <!-- Menambahkan LoginActivity agar bisa diakses -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+            
         <activity
             android:name=".detail_produk"
             android:exported="false" />
         <activity
             android:name=".checkout_activity"
             android:exported="false" />
+            
+        <!-- Menjadikan Home sebagai Activity Utama (Launcher) -->
         <activity
             android:name=".Home"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
