@@ -38,14 +38,14 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             intent.putExtra(KEY_USERNAME, email)
             startActivity(intent)
 
-            Toast.makeText(this, "Button Clicked", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Selamat Datang di MyGalon!", Toast.LENGTH_LONG).show()
         }
     }
 
     override fun onClick(view: View) {
         when(view.id){
             R.id.buttonLogin -> {
-                Toast.makeText(this, "Button Clicked", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Selamat Datang di MyGalon!", Toast.LENGTH_LONG).show()
             }
         }
 
