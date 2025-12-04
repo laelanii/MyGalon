@@ -30,14 +30,14 @@ class GalonAdapter(
 
     inner class GalonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvNamaProduk: TextView = itemView.findViewById(R.id.tvNamaProduk)
-        private val imgProduk: ImageView = itemView.findViewById(R.id.imgProduk)
+        private val imgProduk: ImageView = itemView.findViewById(R.id.imageProduk)
         private val btnAddCart: Button = itemView.findViewById(R.id.btnAddCart)
         private val btnOrder: Button = itemView.findViewById(R.id.btnOrder)
 
         fun bind(galon: galon) {
             tvNamaProduk.text = galon.namaGalon
 
-            // Atur gambar berdasarkan merk galon
+            // Mengatur gambar berdasarkan merk Galon
             val imageResource = when (galon.merkGalon) {
                 merkGalon.Aqua -> R.drawable.aqua
                 merkGalon.LeMinerale -> R.drawable.lemineral
@@ -49,8 +49,6 @@ class GalonAdapter(
             itemView.setOnClickListener {
                 onClickItemGalon(galon)
             }
-
-
         }
     }
 }

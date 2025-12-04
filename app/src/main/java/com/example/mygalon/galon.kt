@@ -4,7 +4,7 @@ data class galon (
     val namaGalon: String,
     val harga: String,
     val merkGalon: merkGalon, //Aqua, Le Minerale,Cleo, OASIS
-    val ImageProduk: Int
+    val ImageProduk: Int // Menampilkan gambar galon
 )
 
 enum class merkGalon {
