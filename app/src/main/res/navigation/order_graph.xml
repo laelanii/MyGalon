@@ -7,13 +7,21 @@
     <fragment
         android:id="@+id/detailGalonFragment"
         android:name="com.example.mygalon.order.DetailGalonFragment"
-        android:label="DetailGalonFragment" />
+        android:label="DetailGalonFragment" >
+        <action
+            android:id="@+id/action_detailGalonFragment_to_keranjangFragment2"
+            app:destination="@id/keranjangFragment" />
+    </fragment>
     <fragment
         android:id="@+id/keranjangFragment"
         android:name="com.example.mygalon.order.KeranjangFragment"
-        android:label="KeranjangFragment" />
+        android:label="KeranjangFragment" >
+        <action
+            android:id="@+id/action_keranjangFragment_to_payment"
+            app:destination="@id/payment" />
+    </fragment>
     <fragment
         android:id="@+id/payment"
-        android:name="com.example.mygalon.order.Payment"
+        android:name="com.example.mygalon.order.PembayaranQRISFragment"
         android:label="Payment" />
 </navigation>

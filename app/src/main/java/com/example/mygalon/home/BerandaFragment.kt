@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mygalon.GalonAdapter
@@ -53,6 +54,7 @@ class BerandaFragment : Fragment() {
 
         val adapter = GalonAdapter(listGalon) { galon ->
             Toast.makeText(requireContext(), "Dipilih: ${galon.namaGalon}", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_berandaFragment_to_detailGalonFragment)
         }
 
         rvProduk.layoutManager = GridLayoutManager(requireContext(), 2)

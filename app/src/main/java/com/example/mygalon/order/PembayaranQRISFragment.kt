@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.mygalon.R
 
-class Payment : Fragment() {
+class PembayaranQRISFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,7 +15,7 @@ class Payment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pembayaran_cod, container, false)
+        return inflater.inflate(R.layout.fragment_pembayaran_qris, container, false)
     }
 
 

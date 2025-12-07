@@ -16,7 +16,7 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0) // Set bottom padding 0 to avoid double padding with bottom nav
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
 

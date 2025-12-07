@@ -16,6 +16,9 @@
         android:label="fragment_beranda"
         tools:layout="@layout/fragment_beranda" >
         <action
+            android:id="@+id/action_berandaFragment_to_detailGalonFragment"
+            app:destination="@id/detailGalonFragment" />
+        <action
             android:id="@+id/action_berandaFragment_to_pesananFragment"
             app:destination="@id/pesananFragment" />
     </fragment>
@@ -27,6 +30,12 @@
         <action
             android:id="@+id/action_pesananFragment_to_riwayatFragment"
             app:destination="@id/riwayatFragment" />
+        <action
+            android:id="@+id/action_pesananFragment_to_pembayaranCodFragment"
+            app:destination="@id/pembayaranCodFragment" />
+        <action
+            android:id="@+id/action_pesananFragment_to_pembayaranQRISFragment"
+            app:destination="@id/pembayaranQRISFragment" />
     </fragment>
     <fragment
         android:id="@+id/riwayatFragment"
@@ -37,4 +46,32 @@
             android:id="@+id/action_riwayatFragment_to_akunFragment"
             app:destination="@id/akunFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/detailGalonFragment"
+        android:name="com.example.mygalon.order.DetailGalonFragment"
+        android:label="fragment_detail_galon"
+        tools:layout="@layout/fragment_detail_galon" >
+        <action
+            android:id="@+id/action_detailGalonFragment_to_keranjangFragment"
+            app:destination="@id/keranjangFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/keranjangFragment"
+        android:name="com.example.mygalon.order.KeranjangFragment"
+        android:label="fragment_keranjang"
+        tools:layout="@layout/fragment_keranjang" >
+        <action
+            android:id="@+id/action_keranjangFragment_to_pesananFragment"
+            app:destination="@id/pesananFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pembayaranCodFragment"
+        android:name="com.example.mygalon.order.PembayaranCodFragment"
+        android:label="fragment_pembayaran_cod"
+        tools:layout="@layout/fragment_pembayaran_cod" />
+    <fragment
+        android:id="@+id/pembayaranQRISFragment"
+        android:name="com.example.mygalon.order.PembayaranQRISFragment"
+        android:label="fragment_pembayaran_qris"
+        tools:layout="@layout/fragment_pembayaran_qris" />
 </navigation>
