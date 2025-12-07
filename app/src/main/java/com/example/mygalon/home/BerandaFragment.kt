@@ -1,10 +1,12 @@
 package com.example.mygalon.home
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,24 +16,34 @@ import com.example.mygalon.galon
 import com.example.mygalon.merkGalon
 
 class BerandaFragment : Fragment() {
-//    Mendeklarasikan RecylerView
+
     private lateinit var rvProduk: RecyclerView
+    private lateinit var tvNamaPengguna: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_beranda, container, false)
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-// Menghubungkan RecyclerView dengan xml
+        tvNamaPengguna = view.findViewById(R.id.tvNamaPengguna)
+
+//        Mengambil username dari shared preferences
+        val sharedPref = requireActivity()
+            .getSharedPreferences("USER_LOGIN", Context.MODE_PRIVATE)
+
+        val username = sharedPref.getString("USERNAME", "Pengguna")
+
+//        Menampilkan ke textview
+        tvNamaPengguna.text = "Halo, $username"
+
+//        Menampilkan Produk Galon dengan recyclerview
         rvProduk = view.findViewById(R.id.rvProduk)
-// Data list galon
+
         val listGalon = listOf(
             galon("Galon Aqua 19L", "-", merkGalon.Aqua, R.drawable.aqua),
             galon("Galon Le Minerale 19L", "-", merkGalon.LeMinerale, R.drawable.lemineral),

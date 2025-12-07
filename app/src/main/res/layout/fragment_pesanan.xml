@@ -42,7 +42,7 @@
                         android:layout_height="wrap_content"
                         android:text="Salwa Laelani"
                         android:textStyle="bold"
-                        android:textColor="#000" />
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -88,6 +88,7 @@
                             android:layout_height="wrap_content"
                             android:text="Aqua Galon"
                             android:textSize="16sp"
+                            android:textColor="@color/black"
                             android:textStyle="bold" />
 
                         <TextView
@@ -103,6 +104,7 @@
                     android:layout_height="45dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/input"
+                    android:textColor="@color/black"
                     android:hint="Catatan:" />
 
                 <LinearLayout
@@ -117,12 +119,14 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textColor="@color/black"
                         android:text="Biaya Pengiriman" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Rp 5000"
+                        android:textColor="@color/black"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -187,16 +191,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Subtotal pesanan: Rp 25.000"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Subtotal pengiriman:Rp 5000"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Total diskon pengiriman: Rp 5000"/>
             </LinearLayout>
 

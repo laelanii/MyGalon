@@ -35,6 +35,10 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         buttonLogin.setOnClickListener{
             val email = editTextTextEmailAddress.text.toString() //proses pengiriman
             val intent = Intent(this, Home::class.java)
+
+            val sharedPref = getSharedPreferences("USER_LOGIN", MODE_PRIVATE)
+            sharedPref.edit().putString("USERNAME", email).apply()
+
             intent.putExtra(KEY_USERNAME, email)
             startActivity(intent)
 
