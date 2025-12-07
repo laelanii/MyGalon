@@ -31,7 +31,6 @@ class PesananFragment : Fragment() {
 
         btnCOD.setOnClickListener {
             selectedPaymentMethod = "COD"
-            // Ubah warna manual karena state list animator mungkin override
             btnCOD.setBackgroundColor(requireContext().getColor(android.R.color.darker_gray))
             btnQRIS.setBackgroundColor(requireContext().getColor(R.color.white))
             Toast.makeText(requireContext(), "Metode COD Dipilih", Toast.LENGTH_SHORT).show()
