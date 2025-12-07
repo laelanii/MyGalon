@@ -11,11 +11,12 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/todo"
         android:src="@drawable/aqua" />
 
     <TextView
         android:layout_marginTop="10dp"
-        android:text="QRIS Pembayaran"
+        android:text="@string/qris_pembayaran"
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -29,12 +30,13 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:contentDescription="@string/todo1"
         android:src="@drawable/qris" />
 
     <!-- Instruction text -->
     <TextView
         android:layout_marginTop="12dp"
-        android:text="Scan QR ini menggunakan aplikasi pembayaran Anda untuk menyelesaikan transaksi."
+        android:text="@string/scan_qr_ini_menggunakan_aplikasi_pembayaran_anda_untuk_menyelesaikan_transaksi"
         android:textSize="14sp"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -44,7 +46,7 @@
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Total Pembayaran:"
+        android:text="@string/total_pembayaran"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -52,7 +54,7 @@
         android:id="@+id/txt_total_qris"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rp 25.000"
+        android:text="@string/rp_25_000"
         android:textColor="#FF5822"
         android:textSize="18sp"
         android:textStyle="normal|bold" />
@@ -62,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginTop="30dp"
-        android:text="Selesaikan Pesanan"
+        android:text="@string/selesaikan_pemnayaran"
         android:textStyle="bold"
         android:textSize="18sp"
         android:background="#FF9C2C"

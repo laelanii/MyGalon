@@ -2,4 +2,11 @@
     <string name="app_name">MyGalon</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selesaikan_pemnayaran">Selesaikan Pemnayaran</string>
+    <string name="rp_25_000">Rp 25.000</string>
+    <string name="total_pembayaran">Total Pembayaran:</string>
+    <string name="scan_qr_ini_menggunakan_aplikasi_pembayaran_anda_untuk_menyelesaikan_transaksi">Scan QR ini menggunakan aplikasi pembayaran Anda untuk menyelesaikan transaksi.</string>
+    <string name="qris_pembayaran">QRIS Pembayaran</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
 </resources>
