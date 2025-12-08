@@ -47,24 +47,22 @@ class KeranjangFragment : Fragment() {
 
         if (namaGalon != null && hargaGalon != null && imageGalon != null) {
             // Jika ada data yang dikirim, tambahkan ke list
-            // Note: merkGalon di-hardcode ke Aqua karena enum tidak dikirim via bundle string sederhana
-            // Untuk solusi lebih baik, Galon harus implement Parcelable
             keranjangList.add(galon(namaGalon, hargaGalon, merkGalon.Aqua, imageGalon))
             tvTotalHarga.text = "Rp $hargaGalon"
         } else {
-            // Data dummy jika tidak ada kiriman
+             // Data dummy default
              keranjangList.add(galon("Galon Aqua 19L", "20.000", merkGalon.Aqua, R.drawable.aqua))
              tvTotalHarga.text = "Rp 20.000"
         }
 
-        // Menggunakan GalonAdapter
-        val adapter = GalonAdapter(keranjangList) { galon ->
+        // Menggunakan GalonAdapter dengan isKeranjang = true
+        // Parameter lambda (onclick) tetap ada tapi mungkin tidak melakukan apa-apa atau hanya toast
+        val adapter = GalonAdapter(keranjangList, isKeranjang = true) { galon ->
             Toast.makeText(requireContext(), "Item: ${galon.namaGalon}", Toast.LENGTH_SHORT).show()
         }
         
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
-
 
         btnCheckout.setOnClickListener {
             findNavController().navigate(R.id.action_keranjangFragment_to_pesananFragment)

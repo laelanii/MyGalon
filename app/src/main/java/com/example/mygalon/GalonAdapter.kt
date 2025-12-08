@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class GalonAdapter(
     private val listGalon: List<galon>,
+    private val isKeranjang: Boolean = false, // Parameter baru untuk mode keranjang
     private val onClickItemGalon: (galon) -> Unit
 ) : RecyclerView.Adapter<GalonAdapter.GalonViewHolder>() {
 
@@ -30,21 +31,41 @@ class GalonAdapter(
 
     inner class GalonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvNamaProduk: TextView = itemView.findViewById(R.id.tvNamaProduk)
-        private val imgProduk: ImageView = itemView.findViewById(R.id.imageProduk)
+        private val imgProduk: ImageView = itemView.findViewById(R.id.imageProduk) // Pastikan ID ini sesuai layout item_produk.xml
         private val btnAddCart: Button = itemView.findViewById(R.id.btnAddCart)
         private val btnOrder: Button = itemView.findViewById(R.id.btnOrder)
 
         fun bind(galon: galon) {
             tvNamaProduk.text = galon.namaGalon
 
-            // Mengatur gambar berdasarkan merk Galon
-            val imageResource = when (galon.merkGalon) {
-                merkGalon.Aqua -> R.drawable.aqua
-                merkGalon.LeMinerale -> R.drawable.lemineral
-                merkGalon.Cleo -> R.drawable.cleo
-                merkGalon.Oasis -> R.drawable.oasis
+            // Mengatur gambar berdasarkan merk Galon atau properti image (jika sudah diupdate di galon.kt)
+            // Menggunakan resource yang dikirim di imageProduk jika ada (dari revisi sebelumnya)
+            // Atau fallback ke when clause
+            
+            // Asumsi class galon masih seperti awal (nama, harga, merk)
+            // atau sudah diupdate (nama, harga, merk, ImageProduk:Int)
+            // Kita pakai logic existing + ImageProduk property kalau ada
+            
+            if (galon.ImageProduk != 0) {
+                 imgProduk.setImageResource(galon.ImageProduk)
+            } else {
+                val imageResource = when (galon.merkGalon) {
+                    merkGalon.Aqua -> R.drawable.aqua
+                    merkGalon.LeMinerale -> R.drawable.lemineral
+                    merkGalon.Cleo -> R.drawable.cleo
+                    merkGalon.Oasis -> R.drawable.oasis
+                }
+                imgProduk.setImageResource(imageResource)
             }
-            imgProduk.setImageResource(imageResource)
+
+            // Sembunyikan tombol jika mode Keranjang
+            if (isKeranjang) {
+                btnAddCart.visibility = View.GONE
+                btnOrder.visibility = View.GONE
+            } else {
+                btnAddCart.visibility = View.VISIBLE
+                btnOrder.visibility = View.VISIBLE
+            }
 
             itemView.setOnClickListener {
                 onClickItemGalon(galon)

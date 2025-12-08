@@ -10,23 +10,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="201dp"
+        android:layout_height="wrap_content"
         android:padding="12dp">
-
-        <TextView
-            android:id="@+id/tvNamaProduk"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Nama Produk"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.86" />
 
         <ImageView
             android:id="@+id/imageProduk"
@@ -36,9 +21,46 @@
             android:scaleType="fitCenter"
             android:src="@drawable/aqua"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNamaProduk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Nama Produk"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageProduk" />
+
+        <Button
+            android:id="@+id/btnAddCart"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:text="Add to Cart"
+            android:textSize="10sp"
+            android:backgroundTint="#90E0EF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNamaProduk" />
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:text="Order"
+            android:textSize="12sp"
+            android:backgroundTint="#FFA94D"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnAddCart" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
