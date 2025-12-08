@@ -40,10 +40,6 @@ class GalonAdapter(
             // Menggunakan resource yang dikirim di imageProduk jika ada (dari revisi sebelumnya)
             // Atau fallback ke when clause
 
-            // Asumsi class galon masih seperti awal (nama, harga, merk)
-            // atau sudah diupdate (nama, harga, merk, ImageProduk:Int)
-            // Kita pakai logic existing + ImageProduk property kalau ada
-
             if (galon.ImageProduk != 0) {
                 imgProduk.setImageResource(galon.ImageProduk)
             } else {

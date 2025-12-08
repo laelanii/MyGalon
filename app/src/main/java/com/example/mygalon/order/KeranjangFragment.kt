@@ -50,7 +50,7 @@ class KeranjangFragment : Fragment() {
             keranjangList.add(galon(namaGalon, hargaGalon, merkGalon.Aqua, imageGalon))
             tvTotalHarga.text = "Rp $hargaGalon"
         } else {
-             // Data dummy default
+             // Data dummy
              keranjangList.add(galon("Galon Aqua 19L", "20.000", merkGalon.Aqua, R.drawable.aqua))
              tvTotalHarga.text = "Rp 20.000"
         }
