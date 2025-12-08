@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -46,15 +47,20 @@ class BerandaFragment : Fragment() {
         rvProduk = view.findViewById(R.id.rvProduk)
 
         val listGalon = listOf(
-            galon("Galon Aqua 19L", "-", merkGalon.Aqua, R.drawable.aqua),
-            galon("Galon Le Minerale 19L", "-", merkGalon.LeMinerale, R.drawable.lemineral),
-            galon("Galon Cleo 19L", "-", merkGalon.Cleo, R.drawable.cleo),
-            galon("Galon Oasis 19L", "-", merkGalon.Oasis, R.drawable.oasis)
+            galon("Galon Aqua 19L", "20.000", merkGalon.Aqua, R.drawable.aqua),
+            galon("Galon Le Minerale 19L", "22.000", merkGalon.LeMinerale, R.drawable.lemineral),
+            galon("Galon Cleo 19L", "18.000", merkGalon.Cleo, R.drawable.cleo),
+            galon("Galon Oasis 19L", "17.000", merkGalon.Oasis, R.drawable.oasis)
         )
 
         val adapter = GalonAdapter(listGalon) { galon ->
-            Toast.makeText(requireContext(), "Dipilih: ${galon.namaGalon}", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_berandaFragment_to_detailGalonFragment)
+            // Mengirim data ke DetailGalonFragment menggunakan Bundle
+            val bundle = bundleOf(
+                "nama" to galon.namaGalon,
+                "harga" to galon.harga,
+                "image" to galon.ImageProduk
+            )
+            findNavController().navigate(R.id.action_berandaFragment_to_detailGalonFragment, bundle)
         }
 
         rvProduk.layoutManager = GridLayoutManager(requireContext(), 2)

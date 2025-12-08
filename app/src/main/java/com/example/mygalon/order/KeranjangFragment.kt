@@ -38,10 +38,24 @@ class KeranjangFragment : Fragment() {
         tvTotalHarga = view.findViewById(R.id.tvTotalHarga)
         btnCheckout = view.findViewById(R.id.btnCheckout)
 
-        // Dummy data keranjang
-        val keranjangList = listOf(
-            galon("Galon Aqua 19L", "20.000", merkGalon.Aqua, R.drawable.aqua)
-        )
+        // Menerima data dari DetailGalonFragment
+        val namaGalon = arguments?.getString("nama")
+        val hargaGalon = arguments?.getString("harga")
+        val imageGalon = arguments?.getInt("image")
+
+        val keranjangList = mutableListOf<galon>()
+
+        if (namaGalon != null && hargaGalon != null && imageGalon != null) {
+            // Jika ada data yang dikirim, tambahkan ke list
+            // Note: merkGalon di-hardcode ke Aqua karena enum tidak dikirim via bundle string sederhana
+            // Untuk solusi lebih baik, Galon harus implement Parcelable
+            keranjangList.add(galon(namaGalon, hargaGalon, merkGalon.Aqua, imageGalon))
+            tvTotalHarga.text = "Rp $hargaGalon"
+        } else {
+            // Data dummy jika tidak ada kiriman
+             keranjangList.add(galon("Galon Aqua 19L", "20.000", merkGalon.Aqua, R.drawable.aqua))
+             tvTotalHarga.text = "Rp 20.000"
+        }
 
         // Menggunakan GalonAdapter
         val adapter = GalonAdapter(keranjangList) { galon ->
@@ -51,8 +65,6 @@ class KeranjangFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
 
-        // Harga total (cuma sementara tanpa logika penjumlahan produk)
-        tvTotalHarga.text = "Rp 25.000"
 
         btnCheckout.setOnClickListener {
             findNavController().navigate(R.id.action_keranjangFragment_to_pesananFragment)
