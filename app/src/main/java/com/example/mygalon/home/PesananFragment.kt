@@ -14,6 +14,7 @@ class PesananFragment : Fragment() {
 
     private var selectedPaymentMethod: String = ""
 
+    // Fragment menampilkan tampilan dari file XML fragment_pesanan.xml.
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,6 +23,7 @@ class PesananFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_pesanan, container, false)
     }
 
+//    Menghubungkan button dari XML
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -29,19 +31,21 @@ class PesananFragment : Fragment() {
         val btnQRIS = view.findViewById<Button>(R.id.btnQRIS)
         val btnOrder = view.findViewById<Button>(R.id.btnOrder)
 
+//    Logika button COD
         btnCOD.setOnClickListener {
             selectedPaymentMethod = "COD"
             btnCOD.setBackgroundColor(requireContext().getColor(android.R.color.darker_gray))
             btnQRIS.setBackgroundColor(requireContext().getColor(R.color.white))
             Toast.makeText(requireContext(), "Metode COD Dipilih", Toast.LENGTH_SHORT).show()
         }
-
+//    Logika button QRIS
         btnQRIS.setOnClickListener {
             selectedPaymentMethod = "QRIS"
             btnQRIS.setBackgroundColor(requireContext().getColor(android.R.color.darker_gray))
             btnCOD.setBackgroundColor(requireContext().getColor(R.color.white))
             Toast.makeText(requireContext(), "Metode QRIS Dipilih", Toast.LENGTH_SHORT).show()
         }
+
 
         btnOrder.setOnClickListener {
             when (selectedPaymentMethod) {

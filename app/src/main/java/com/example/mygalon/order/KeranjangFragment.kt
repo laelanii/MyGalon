@@ -55,7 +55,7 @@ class KeranjangFragment : Fragment() {
              tvTotalHarga.text = "Rp 20.000"
         }
 
-        // Menggunakan GalonAdapter dengan isKeranjang = true
+        // Menggunakan GalonAdapter dengan isKeranjang
         // Parameter lambda (onclick) tetap ada tapi mungkin tidak melakukan apa-apa atau hanya toast
         val adapter = GalonAdapter(keranjangList, isKeranjang = true) { galon ->
             Toast.makeText(requireContext(), "Item: ${galon.namaGalon}", Toast.LENGTH_SHORT).show()
