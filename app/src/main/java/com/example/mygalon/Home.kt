@@ -23,12 +23,7 @@ class Home : AppCompatActivity() {
             insets
         }
 
-        //intent implicit fungsi button customerservice
-        val imgbtnCS = findViewById<ImageButton>(R.id.imgbtnCS)
-        imgbtnCS.setOnClickListener {
-            val implicitWhatsapp = Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/6285947114647"))
-            startActivity(implicitWhatsapp)
-        }
+
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
